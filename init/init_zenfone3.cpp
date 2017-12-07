@@ -32,11 +32,14 @@
 #include <sys/stat.h>
 
 #include <android-base/properties.h>
-#include "vendor_init.h"
+#include <android-base/logging.h>
 #include "property_service.h"
 
 #include <fcntl.h>
 #include <unistd.h>
+
+namespace android {
+namespace init {
 
 using android::init::property_set;
 char const *product;
@@ -182,3 +185,6 @@ void vendor_load_properties()
     property_set("ro.sf.lcd_density", dpi);
     property_set("ro.com.google.clientidbase.ms", "android-asus-tpin");
 }
+
+}  // namespace init
+}  // namespace android
