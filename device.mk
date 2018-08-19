@@ -282,10 +282,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 
-# ContextHub HAL
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0
-
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -506,7 +502,8 @@ PRODUCT_PACKAGES += \
 
 # FlipFlap
 PRODUCT_PACKAGES += \
-   FlipFlap
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
 
 # HIDL
 PRODUCT_PACKAGES += \
