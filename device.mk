@@ -519,5 +519,3 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
