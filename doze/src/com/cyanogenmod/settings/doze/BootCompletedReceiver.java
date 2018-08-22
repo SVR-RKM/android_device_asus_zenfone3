@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2015 The CyanogenMod Project
- * Copyright (c) 2017 The LineageOS Project
+ * Copyright (c) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package com.cyanogenmod.settings.doze;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -23,11 +22,16 @@ import android.content.Intent;
 import android.util.Log;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
-    static final String TAG = "KiwiDoze";
+
+    private static final boolean DEBUG = false;
+    private static final String TAG = "ZenfoneDoze";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        Log.d(TAG, "Booting");
-        context.startService(new Intent(context, SensorsDozeService.class));
+        if (Utils.isDozeEnabled(context) && Utils.sensorsEnabled(context)) {
+            if (DEBUG) Log.d(TAG, "Starting service");
+            Utils.startService(context);
+        }
     }
+
 }
