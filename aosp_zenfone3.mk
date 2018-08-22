@@ -17,10 +17,13 @@ $(call inherit-product, device/asus/zenfone3/full_zenfone3.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := zenfone3
-PRODUCT_NAME := lineage_zenfone3
+PRODUCT_NAME := aosp_zenfone3
 PRODUCT_BRAND := asus
 PRODUCT_MANUFACTURER := asus
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.name
+
+$(call inherit-product, vendor/aosp/common.mk)
+

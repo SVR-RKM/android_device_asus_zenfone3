@@ -505,8 +505,8 @@ PRODUCT_PACKAGES += \
    ZenfoneDoze
 
 # FlipFlap
-PRODUCT_PACKAGES += \
-   FlipFlap
+#PRODUCT_PACKAGES += \
+#   FlipFlap
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -520,4 +520,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
