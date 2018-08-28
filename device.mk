@@ -497,8 +497,8 @@ PRODUCT_PACKAGES += \
     libandroid_net
 
 # Doze
-PRODUCT_PACKAGES += \
-   ZenfoneDoze
+#PRODUCT_PACKAGES += \
+#   ZenfoneDoze
 
 # FlipFlap
 PRODUCT_PACKAGES += \
